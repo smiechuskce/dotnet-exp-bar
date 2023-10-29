@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "vueapp", "vueapp\vueapp.esproj", "{55CF79FE-B449-4CEC-A024-4F583128A745}"
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "DotNetBar.UI", "DotNetBar.UI\DotNetBar.UI.esproj", "{55CF79FE-B449-4CEC-A024-4F583128A745}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "webapi", "webapi\webapi.csproj", "{08AC4F92-44DF-46A2-A234-5F2F5A86D089}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetBar.Api", "DotNetBar.Api\DotNetBar.Api.csproj", "{08AC4F92-44DF-46A2-A234-5F2F5A86D089}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{4E9F7B15-CA94-40B5-91B2-16EF5480C60D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetBar.Architecture", "docs\DotNetBar.Architecture\DotNetBar.Architecture.csproj", "{510E9842-B37F-4ED3-B27B-6CDA79B5CB25}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,9 +27,16 @@ Global
 		{08AC4F92-44DF-46A2-A234-5F2F5A86D089}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08AC4F92-44DF-46A2-A234-5F2F5A86D089}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08AC4F92-44DF-46A2-A234-5F2F5A86D089}.Release|Any CPU.Build.0 = Release|Any CPU
+		{510E9842-B37F-4ED3-B27B-6CDA79B5CB25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{510E9842-B37F-4ED3-B27B-6CDA79B5CB25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{510E9842-B37F-4ED3-B27B-6CDA79B5CB25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{510E9842-B37F-4ED3-B27B-6CDA79B5CB25}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{510E9842-B37F-4ED3-B27B-6CDA79B5CB25} = {4E9F7B15-CA94-40B5-91B2-16EF5480C60D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C18E6D5B-BD34-4FEA-AFAB-5BBD60672D21}
