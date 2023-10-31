@@ -9,8 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetBar.Api", "DotNetBar.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{4E9F7B15-CA94-40B5-91B2-16EF5480C60D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetBar.Architecture", "docs\DotNetBar.Architecture\DotNetBar.Architecture.csproj", "{510E9842-B37F-4ED3-B27B-6CDA79B5CB25}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetBar.DataAccess", "DotNetBar.DataAccess\DotNetBar.DataAccess.csproj", "{1FE4EBB5-5546-4384-A342-79C377460F11}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "infra", "infra", "{8F957DF0-1B60-4ABD-88BA-7BC990C5DC3D}"
@@ -34,10 +32,6 @@ Global
 		{08AC4F92-44DF-46A2-A234-5F2F5A86D089}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08AC4F92-44DF-46A2-A234-5F2F5A86D089}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08AC4F92-44DF-46A2-A234-5F2F5A86D089}.Release|Any CPU.Build.0 = Release|Any CPU
-		{510E9842-B37F-4ED3-B27B-6CDA79B5CB25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{510E9842-B37F-4ED3-B27B-6CDA79B5CB25}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{510E9842-B37F-4ED3-B27B-6CDA79B5CB25}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{510E9842-B37F-4ED3-B27B-6CDA79B5CB25}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1FE4EBB5-5546-4384-A342-79C377460F11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1FE4EBB5-5546-4384-A342-79C377460F11}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1FE4EBB5-5546-4384-A342-79C377460F11}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -45,9 +39,6 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{510E9842-B37F-4ED3-B27B-6CDA79B5CB25} = {4E9F7B15-CA94-40B5-91B2-16EF5480C60D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C18E6D5B-BD34-4FEA-AFAB-5BBD60672D21}
