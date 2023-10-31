@@ -1,7 +1,10 @@
-﻿namespace webapi.Models;
+﻿using MongoDB.Bson.Serialization.Attributes;
 
-internal class Bar
+namespace DotNetBar.DataAccess.Models;
+
+public class Bar
 {
+    [BsonId]
     public Guid Id { get; init; }
 
     public string Name { get; init; } = default!;

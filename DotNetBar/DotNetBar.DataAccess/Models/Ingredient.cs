@@ -1,6 +1,6 @@
-﻿namespace webapi.Models;
+﻿namespace DotNetBar.DataAccess.Models;
 
-internal class Ingredient
+public class Ingredient
 {
     public string Name { get; init; }
 

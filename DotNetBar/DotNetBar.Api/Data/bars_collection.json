@@ -1,0 +1,71 @@
+[
+  {
+    "_id": UUID("61c752e8-993c-4bf2-ba91-6570758a8509"),
+    "name": "The Main",
+    "warehouseId": UUID("a53ddedf-0a2e-4885-b14a-7760b1c1342a"),
+    "inventory": {
+      "ingredients": [
+        {
+          "name": "Campari Bitter",
+          "category": 1,
+          "count": 16
+        },
+        {
+          "name": "Jagermeister",
+          "category": 2,
+          "count": 12
+        },
+        {
+          "name": "Bols Blue",
+          "category": 1,
+          "count": 7
+        },
+        {
+          "name": "Angostura Bitters",
+          "category": 2,
+          "count": 10
+        },
+        {
+          "name": "Jack Daniel's Old No.7",
+          "category": 2,
+          "count": 20
+        },
+        {
+          "name": "Johnny Walker Black Label",
+          "category": 2,
+          "count": 19
+        },
+        {
+          "name": "Caol Ila 12",
+          "category": 1,
+          "count": 8
+        },
+        {
+          "name": "Rum-Bar Silver",
+          "category": 2,
+          "count": 15
+        },
+        {
+          "name": "El Jimador Blanco",
+          "category": 2,
+          "count": 16
+        },
+        {
+          "name": "Lemon (kg)",
+          "category": 2,
+          "count": 20
+        },
+        {
+          "name": "Sugar (kg)",
+          "category": 2,
+          "count": 20
+        },
+        {
+          "name": "Orange juice (l)",
+          "category": 2,
+          "count": 18
+        }
+      ]
+    }
+  }
+]

@@ -1,6 +1,6 @@
-﻿namespace webapi.Models;
+﻿namespace DotNetBar.DataAccess.Models;
 
-internal class Inventory
+public class Inventory
 {
     public IEnumerable<Ingredient> Ingredients { get; init; }
 }

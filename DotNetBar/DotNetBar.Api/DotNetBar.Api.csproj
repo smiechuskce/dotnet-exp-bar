@@ -7,8 +7,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Data\bars_collection.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Data\bars_collection.json" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.13" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DotNetBar.DataAccess\DotNetBar.DataAccess.csproj" />
   </ItemGroup>
 
 </Project>

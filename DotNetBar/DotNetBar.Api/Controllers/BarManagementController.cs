@@ -1,7 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using webapi.Models;
+﻿using DotNetBar.DataAccess.Models;
+using Microsoft.AspNetCore.Mvc;
 
-namespace webapi.Controllers;
+namespace DotNetBar.Api.Controllers;
 
 [ApiController]
 [Route("[controller]")]
