@@ -1,4 +1,5 @@
-﻿using DotNetBar.DataAccess.Config;
+﻿using DotNetBar.Api.ViewModels;
+using DotNetBar.DataAccess.Config;
 using DotNetBar.DataAccess.Models;
 using Microsoft.Extensions.Options;
 using MongoDB.Driver;
@@ -23,6 +24,18 @@ public class BarsService
             barManagementDatabaseSettings.Value.BarsCollectionName);
     }
 
-    public async Task<IEnumerable<Bar>> GetBars() =>
-        await barsCollection.Find(_ => true).ToListAsync();
+    public async Task<IEnumerable<Bar>> GetBars(CancellationToken token) =>
+        await barsCollection.Find(_ => true).ToListAsync(token);
+
+    public async Task UpdateIngredientCount(UpdateBarIngredientData data, CancellationToken token)
+    {
+        var builder = Builders<Bar>.Filter;
+        var filter = builder.Eq(x => x.Id, data.BarId)
+                     & builder.ElemMatch(x => x.Inventory.Ingredients,
+                         ingredient => ingredient.Name == data.IngredientName);
+
+        var update = Builders<Bar>.Update.Set("Bar.inventory.ingredients.$.count", data.Count);
+
+        await barsCollection.UpdateOneAsync(filter, update, null, token);
+    }
 }

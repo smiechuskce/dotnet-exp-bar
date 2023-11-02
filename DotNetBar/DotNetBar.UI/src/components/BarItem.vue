@@ -12,10 +12,18 @@
         
         <div class="inventory">
             <h4>Inventory</h4>
-            <div v-for="ingredient in instance.inventory.ingredients" :key="ingredient.id">
+            <div v-for="ingredient in instance.inventory.ingredients" :key="ingredient.name">
                 <span>{{ ingredient.name }}</span>: <span>{{ ingredient.count }}</span>
             </div>
         </div>
+    </div>
+    <div>
+        <h4>Pick an item to decrease its count</h4>
+        <select v-model="selected">
+            <option disabled value="">Select one...</option>
+            <option v-for="ingredient in instance.inventory.ingredients" :value="ingredient.name">{{ ingredient.name }}</option>
+        </select>
+        <button @click="onDecrease">Decrease</button>
     </div>
 </template>
 
@@ -23,6 +31,21 @@
 
     export default {
         props: ['instance'],
+        emits: ['decrease-count'],
+        data() {
+            return {
+                selected: "",
+            }
+        },
+        methods: {
+            onDecrease() {
+                this.$emit("decrease-count", JSON.stringify({
+                        barId: this.instance.id,
+                        ingredientName: this.selected,
+                        count: 1
+                    }))
+            }
+        }
     };
 </script>
 
