@@ -37,6 +37,9 @@ public static class DataAccessServicesExtensions
 
         ConventionRegistry.Register("Camel case convention", pack, t => true);
         BsonSerializer.RegisterSerializer(new GuidSerializer(GuidRepresentation.Standard));
+
+        // Required to correctly set UUID instead of CSUUID which won't work
+        BsonDefaults.GuidRepresentationMode = GuidRepresentationMode.V3;
     }
 
     private static void InitDb(IServiceCollection services)

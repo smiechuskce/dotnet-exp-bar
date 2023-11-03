@@ -1,5 +1,4 @@
-﻿using DotNetBar.Api.ViewModels;
-using DotNetBar.DataAccess.Models;
+﻿using DotNetBar.DataAccess.Models;
 using DotNetBar.DataAccess.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -28,8 +27,10 @@ public class BarManagementController : Controller
 
     [HttpPut]
     [Route("update-ingredient-count")]
-    public IActionResult UpdateBarIngredient([FromBody]UpdateBarIngredientData data, CancellationToken token)
+    public async Task<IActionResult> UpdateBarIngredient([FromBody]UpdateBarIngredientData data, CancellationToken token)
     {
-        return Ok(this.barsService.UpdateIngredientCount(data, token));
+        return await this.barsService.UpdateIngredientCount(data, token)
+            ? Ok()
+            : BadRequest("The was an error while updating ingredient");
     }
 }
