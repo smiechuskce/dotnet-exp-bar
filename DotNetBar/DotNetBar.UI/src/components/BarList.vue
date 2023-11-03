@@ -23,8 +23,8 @@
             fetchBars() {
                 fetch('barmanagement/get-bars')
                     .then(response => response.json())
-                    .then(bars => {
-                        this.allBars = bars;
+                    .then(response => {
+                        this.allBars = response.bars;
                         return;
                     })
             },
