@@ -1,5 +1,6 @@
 ﻿using DotNetBar.Api.CQRS.Commands;
 using DotNetBar.Api.CQRS.Queries;
+using FluentValidation;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -27,8 +28,16 @@ public class BarManagementController : Controller
     [Route("update-ingredient-count")]
     public async Task<IActionResult> UpdateBarIngredient(
         [FromBody]UpdateBarIngredient.Command data,
+        [FromServices]IValidator<UpdateBarIngredient.Command> validator,
         CancellationToken cancellationToken)
     {
+        var validationResult = await validator.ValidateAsync(data, cancellationToken);
+
+        if (!validationResult.IsValid)
+        {
+            return BadRequest(validationResult.Errors);
+        }
+
         var result =  await this.mediator.Send(data, cancellationToken);
         
         return result.IsSuccess ? Ok()
